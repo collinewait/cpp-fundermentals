@@ -1,6 +1,7 @@
 #include <iostream>
 // #include "Person.h"
 #include "Tweeter.h"
+#include "Status.h"
 using std::cout;
 using std::endl;
 using std::string;
@@ -17,6 +18,16 @@ int main()
 
     // int i = p1.arbitrarynumber; can't access private variable
     cout << "name is " << name << endl;
+
+    Status s = Pending;
+    cout << "status is " << s << endl;
+    s = Approved;
+    cout << "status is " << s << endl;
+
+    FileError fe = FileError::notfound;
+    fe = FileError::ok;
+    NetworkError ne = NetworkError::disconnected;
+    ne = NetworkError::ok;
 
     return 0; 
 }
