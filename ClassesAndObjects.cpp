@@ -1,16 +1,20 @@
 #include <iostream>
 #include "Person.h"
+using std::cout;
+using std::endl;
+using std::string;
+
 int main()
 {
     Person p1("Colline", "Waitire", 12345);
     {
         Person p2;
     }
-    std::cout << "after innermost block" << std::endl;
-    std::string name = p1.getName();
+    cout << "after innermost block" << endl;
+    string name = p1.getName();
 
     // int i = p1.arbitrarynumber; can't access private variable
-    std::cout << "name is " << name << std::endl;
+    cout << "name is " << name << endl;
 
     return 0; 
 }
