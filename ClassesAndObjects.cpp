@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Person.h"
+// #include "Person.h"
+#include "Tweeter.h"
 using std::cout;
 using std::endl;
 using std::string;
@@ -8,7 +9,8 @@ int main()
 {
     Person p1("Colline", "Waitire", 12345);
     {
-        Person p2;
+        Tweeter t1("Wait", "col", 66754, "@someone");
+        string name2 = t1.getName();
     }
     cout << "after innermost block" << endl;
     string name = p1.getName();
