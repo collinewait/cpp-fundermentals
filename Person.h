@@ -7,6 +7,7 @@ class Person
         int arbitrarynumber;
     public:
         Person(std::string firstname, std::string lastname, int arbitrarynumber);
-        Person()=default;
+        Person();
+        ~Person();
         std::string getName();
 };
