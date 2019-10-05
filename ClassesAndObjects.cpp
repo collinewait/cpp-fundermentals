@@ -2,7 +2,7 @@
 #include "Person.h"
 int main()
 {
-    Person p1;
+    Person p1("Colline", "Waitire", 12345);
     Person p2;
     std::string name = p1.getName();
 

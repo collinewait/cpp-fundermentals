@@ -6,5 +6,7 @@ class Person
         std::string lastname;
         int arbitrarynumber;
     public:
+        Person(std::string firstname, std::string lastname, int arbitrarynumber);
+        Person()=default;
         std::string getName();
 };
