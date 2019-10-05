@@ -13,7 +13,7 @@ int main() {
 
     double d1 = 2.2;
     double d2 = i1;
-    int i5 = d1;
+    int i5 = static_cast<int>(d1);
     std::cout << "d1= " << d1 << std::endl;
     std::cout << "d2= " << d2 << std::endl;
     std::cout << "i5= " << i5 << std::endl;
@@ -40,5 +40,5 @@ int main() {
     auto a8 = 0xFF;
     auto a9 = 0b111;
 
-    a1 = a2;
+    a1 = static_cast<int>(a2);
 }
