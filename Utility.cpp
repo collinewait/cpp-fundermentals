@@ -19,8 +19,7 @@ bool IsPrime(int x)
     return prime;
 }
 
-bool Is2MorePrime(int& x)
+bool Is2MorePrime(int const& x)
 {
-    x = x+2;
-    return IsPrime(x);
+    return IsPrime(x+2);
 }
