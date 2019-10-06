@@ -11,13 +11,15 @@ int main()
     Person p1("Colline", "Waitire", 12345);
     {
         Tweeter t1("Wait", "col", 66754, "@someone");
-        string name2 = t1.getName();
+        string name2 = t1.GetName();
     }
     cout << "after innermost block" << endl;
-    string name = p1.getName();
+    cout << "p1: " << p1.GetName() << " " << p1.GetNumber() << endl;
+    p1.SetNumber(678);
+    cout << "p1: " << p1.GetName() << " " << p1.GetNumber() << endl;
 
     // int i = p1.arbitrarynumber; can't access private variable
-    cout << "name is " << name << endl;
+    // cout << "name is " << name << endl;
 
     Status s = Pending;
     cout << "status is " << s << endl;

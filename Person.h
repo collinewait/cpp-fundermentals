@@ -11,5 +11,7 @@ class Person
         Person(std::string firstname, std::string lastname, int arbitrarynumber);
         Person();
         ~Person();
-        std::string getName();
+        std::string GetName() const;
+        int GetNumber() const {return arbitrarynumber;}
+        void SetNumber(int number) {arbitrarynumber = number;}
 };

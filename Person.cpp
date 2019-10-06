@@ -13,17 +13,15 @@ Person::Person(std::string firstname, std::string lastname,
 
 Person::Person() : arbitrarynumber(0)
 {
-    cout << "constructing" <<
-        firstname << " " << lastname << endl;
+    cout << "constructing" << GetName() << endl;
 }
 
 Person::~Person()
 {
-    cout << "destructing" <<
-        firstname << " " << lastname << endl;
+    cout << "destructing" << GetName() << endl;
 }
 
-std::string Person::getName()
+std::string Person::GetName() const
 {
     return firstname + " " + lastname;
 }
