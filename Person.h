@@ -7,6 +7,8 @@ class Person
         std::string firstname;
         std::string lastname;
         int arbitrarynumber;
+
+        friend bool operator<(int i, Person const& p);
     public:
         Person(std::string firstname, std::string lastname, int arbitrarynumber);
         Person();
