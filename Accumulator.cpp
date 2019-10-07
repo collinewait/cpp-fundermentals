@@ -18,5 +18,13 @@ int main()
     strings += "world";
     cout << strings.GetTotal() << endl;
 
+    // Person start("", "", 0);
+    Accum<Person> people(0);
+    Person p1("Colline", "Waitire", 12);
+    Person p2("some", "name", 8);
+    people += p1;
+    people += p2;
+    cout << people.GetTotal() << endl;
+
     return 0;
 }
