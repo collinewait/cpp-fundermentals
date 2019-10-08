@@ -18,7 +18,7 @@ class Person
         Person();
         virtual ~Person();
         virtual std::string GetName() const;
-        int GetNumber() const {return arbitrarynumber;}
+        virtual int GetNumber() const {return arbitrarynumber;}
         void SetNumber(int number) {arbitrarynumber = number;}
         void SetFirstName(std::string first) {firstname = first;}
         bool operator<(Person const& p) const;

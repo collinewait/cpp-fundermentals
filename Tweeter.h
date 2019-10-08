@@ -14,4 +14,5 @@ public:
         std::string handle);
     ~Tweeter();
     std::string GetName() const; // overriding GetName here
+    int GetNumber() const {return 0;}
 };
