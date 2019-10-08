@@ -18,3 +18,8 @@ Tweeter::~Tweeter()
     std::cout << "destructuring tweeter " <<
         twitterhandle<< std::endl;
 }
+
+std::string Tweeter::GetName() const
+{
+    return Person::GetName() + " " + twitterhandle;
+}

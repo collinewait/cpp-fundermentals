@@ -42,3 +42,8 @@ void Person::AddResource()
     pResource=std::make_shared<Resource>("Resource for " + GetName());
 }
 
+Person::~Person()
+{
+
+}
+
