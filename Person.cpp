@@ -5,7 +5,7 @@ using std::endl;
 
 Person::Person(std::string firstname, std::string lastname,
     int arbitrarynumber) : firstname(firstname), lastname(lastname),
-    arbitrarynumber(arbitrarynumber), pResource(nullptr)
+    arbitrarynumber(arbitrarynumber)
 {
     cout << "constructing" <<
         firstname << " " << lastname << endl;
@@ -14,12 +14,6 @@ Person::Person(std::string firstname, std::string lastname,
 Person::Person() : arbitrarynumber(0)
 {
     cout << "constructing" << GetName() << endl;
-}
-
-Person::~Person()
-{
-    cout << "destructing" << GetName() << endl;
-    delete pResource;
 }
 
 std::string Person::GetName() const
@@ -44,20 +38,7 @@ bool operator<(int i, Person const& p)
 
 void Person::AddResource()
 {
-    delete pResource;
-    pResource = new Resource("Resource for " + GetName());
+    pResource.reset();
+    pResource=std::make_shared<Resource>("Resource for " + GetName());
 }
 
-Person::Person(Person const & p)
-{
-    pResource = new Resource(p.pResource->GetName());
-}
-
-Person& Person::operator=(const Person& p)
-{
-    // typically first checks to make sure it is not assigning to itsself but
-    // that code isn't here.
-    delete pResource;
-    pResource = new Resource(p.pResource->GetName());
-    return *this;
-}
